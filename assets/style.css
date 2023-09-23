@@ -99,10 +99,11 @@ header {
 }
 
 
-.navbar-items li {
+.navbar-items > .nav-item {
     transition-delay: 0.2s;
     margin-left: 20px;
     margin-bottom: 30px;
+    font-weight: 300;
 }
 
 .logo {
