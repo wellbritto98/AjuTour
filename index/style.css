@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'TT Norms';
+    src: url('/index/TTNorms-Regular.otf') format('opentype');
+    src: url('/index/TTNorms-Light.otf') format('opentype');
+    src: url('/index/TTNorms-Thin.otf') format('opentype');
+}
+
+
+body {
+    background: linear-gradient(45deg, #6CEAE6, #B0DAE8, #A2CEEB, #DFE2E9, #FFEFE5);
+    background-attachment: fixed;
+}
+
+.principal {
+    font-size: 90px;
+    white-space: pre;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.foto {
+    margin-left: 20%; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.menu-icon {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.navbar-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    gap: 20px;
+    overflow: hidden;
+    max-width: 0;
+    transition: max-width 1s linear;
+    font-size: 20px;
+}
+
+.navbar-items.active {
+    max-width: 1000px; 
+}
+
+.navbar-items li {
+    opacity: 0;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.navbar-items.active li {
+    opacity: 1;
+}
+
+.navbar-items li:hover {
+    text-decoration: underline;
+}
+
+
+.cabecalho {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.navbar-items {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.menu-icon {
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+.navbar-items li {
+    transition-delay: 0.2s;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    margin-left: 15%;
+}
+
+.principal, .navbar-items {
+    font-family: 'TT Norms', sans-serif;
+}
