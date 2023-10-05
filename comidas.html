@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/comidas.css" />
+    <title>Comidas típicas</title>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho">
+        <div class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="logo"
+            width="150"
+            height="150"
+          />
+        </div>
+        <nav class="navbar">
+          <span class="menu-icon" onclick="toggleMenu()">☰</span>
+          <ul class="navbar-items">
+            <li class="nav-item" style="transition-delay: 0.2s">
+              <a href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item" style="transition-delay: 0.4s">
+              <a href="comidas.html"> Atrações </a>
+            </li>
+            <li class="nav-item" style="transition-delay: 0.6s">Sobre nós</li>
+            <li class="nav-item" style="transition-delay: 0.8s">Contato</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <h1>Comidas típicas aracajuanas</h1>
+        <p>Por: Fulano Bla bla bla, ultima edição 23/09/2023</p>
+      </div>
+
+      <div class="description">
+        <span class="indent">Aracaju</span>, a bela capital sergipana, é um
+        verdadeiro tesouro gastronômico do Nordeste brasileiro. Entre suas
+        delícias típicas, destaca-se o caranguejo, servido em diversas
+        preparações e amplamente apreciado nos bares e restaurantes à beira-mar.
+        A moqueca de arraia, rica em sabores e temperos, é outro prato que
+        reflete a alma culinária da região, trazendo um gostinho especial do mar
+        para a mesa. E para finalizar com um toque adocicado, o beiju, uma
+        espécie de tapioca, se apresenta como a escolha perfeita, revelando a
+        diversidade e riqueza dos sabores aracajuanos.
+      </div>
+
+      <div class="fotos">
+        <div>
+          <img
+            src="./assets/images/img-comidas/carangueijo.png"
+            alt="carangueijo"
+          />
+        </div>
+
+        <div>
+          <img
+            src="./assets/images/img-comidas/moqueca.png"
+            alt="carangueijo"
+          />
+        </div>
+
+        <div>
+          <img src="./assets/images/img-comidas/beijus.png" alt="carangueijo" />
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        const navbarItems = document.querySelector(".navbar-items");
+        if (navbarItems.classList.contains("active")) {
+          navbarItems.classList.remove("active");
+        } else {
+          navbarItems.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
