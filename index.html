@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aju Tour</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/about.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4188f6cdfe.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="cabecalho">
         <div class="logo">
@@ -15,25 +23,164 @@
         </div>
         <nav class="navbar">
             <span class="menu-icon" onclick="toggleMenu()">☰</span>
-            <ul class="navbar-items">
+
+            <ul class="navbar-items" onscroll="toggleMenuOffOnScroll()">
+
                 <li class="nav-item" style="transition-delay: 0.2s;"><a href="/index.html">Início</a></li>
                 <li class="nav-item" style="transition-delay: 0.4s;">Atrações</li>
                 <li class="nav-item" style="transition-delay: 0.6s;">Sobre nós</li>
-                <li class="nav-item" style="transition-delay: 0.8s;"><a class="contato" href="./contato.html">Contato</a></li>
+                <li class="nav-item" style="transition-delay: 0.8s;"><a class="contato"
+                        href=".section-contato">Contato</a></li>
             </ul>
         </nav>
     </div>
 
     <main class="container">
         <header>
-            <h1 class="principal">
-                Eleve a sua
-                experiência
-                turística
-            </h1>
-            <img class="foto" src="assets/images/foto.png" alt="foto" width="1100">
+            <style>
+                .main-content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    grid-template-areas: "principal foto";
+                    align-items: center;
+                    justify-items: center;
+
+
+                }
+            </style>
+            <div class="main-content">
+                <h1 class="principal">
+                    Eleve a sua
+                    experiência
+                    turística
+
+                    <button class="botão">Navegue</button>
+                </h1>
+                <img class="foto" src="/assets/images/foto.png" alt="foto" width="100%">
+            </div>
         </header>
+
+
+
     </main>
+
+    <section style="padding-top: 300px;">
+        <div class="container  d-flex justify-content-center">
+            <div class="atracoes"> 
+                <h2 class="d-flex justify-content-center mb-5 principal" >Atrações</h2>
+                <div id="carouselExampleCaptions" class="carousel slide w-100">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <a href="">
+                        <div class="carousel-item active">
+                            <img src="assets/images/croa.jpeg" class="d-block w-100" alt="CROA DO GORÉ">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Pontos turisticos</h5>
+                                <p>Conheça os destinos mais requisitados do estado.</p>
+                            </div>
+                        </div></a>
+                        <div class="carousel-item">
+                            <img src="assets/images/preparo_do_caranguejo_02.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Comidas</h5>
+                                <p>Aprenda mais sobre as delicias sergipanas</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/quadrilha.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Eventos</h5>
+                                <p>Eventos de arrepiar. Que é animação de cabo a rabo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contato">
+        <div class="cabeçalho-contato">
+            <h1 class="principal">Contato</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.2766914259546!2d-37.06653822402882!3d-10.94245938921656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3c232417e93%3A0x33d3b66d382365ff!2sAv.%20Marieta%20Leite%20-%20Grageru%2C%20Aracaju%20-%20SE%2C%2049027-190!5e0!3m2!1spt-BR!2sbr!4v1696593448719!5m2!1spt-BR!2sbr"
+                    width="600" height="400" style="border:0; " allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="info">
+                <h2><strong>Escritório</strong></h2>
+                <p class="endereco">
+                    Rua Qualquer, 123 <br>
+                    Qualquer Cidade,<br>
+                    Estado, País<br>
+                    (12) 34567-7890<br>
+                </p>
+            </div>
+            <div class="social">
+                <h2><strong>Mídias sociais</strong></h2>
+                <p class="redes">
+                    <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-facebook-f"></i>Nosso Facebook</a><br>
+                    <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-instagram"></i>Nosso Instagram</a><br>
+                    <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-x-twitter"></i>Nosso X/Twitter</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="padding-top: 400px;">
+        <h1 class="principal d-flex justify-content-center mb-5">Sobre nós</h1>
+        <p class="paragrafo"><b>Fundada no coração do vibrante estado de Sergipe, a Aju Tour se orgulha de ser uma das
+                principais empresas de turismo da região. Nosso nome é uma homenagem carinhosa à capital, Aracaju, e
+                reflete nossa paixão e compromisso com tudo que Sergipe tem a oferecer.
+                Nossa jornada começou com uma visão simples: revelar as belezas escondidas e as experiências únicas que
+                Sergipe, muitas vezes chamado de "pequeno grande estado", tem a oferecer. Desde as serenas margens do
+                Rio São Francisco até os animados festivais locais, nossa missão sempre foi proporcionar uma experiência
+                turística autêntica e memorável.
+                A equipe da Aju Tour é composta por profissionais dedicados, com vasta experiência e conhecimento sobre
+                a região. Somos todos sergipanos apaixonados por nossa terra e cultura. E é essa paixão que nos move a
+                selecionar as melhores experiências para nossos clientes, seja através de passeios tradicionais ou
+                experiências personalizadas.
+                Ao longo dos anos, estabelecemos parcerias com os melhores hotéis, restaurantes e guias locais para
+                garantir que nossos clientes recebam o melhor de Sergipe em todos os aspectos de sua viagem. Valorizamos
+                a sustentabilidade, buscando sempre práticas que promovam o turismo responsável e o bem-estar das
+                comunidades locais.
+                Para a Aju Tour, o turismo vai além de simplesmente visitar um local. Trata-se de vivenciar a cultura, a
+                gastronomia, a música e, acima de tudo, o calor humano sergipano. Convidamos você a se juntar a nós
+                nesta jornada de descobertas e a se encantar com as maravilhas de Sergipe.
+                Seja bem-vindo à experiência Aju Tour. Seu passeio, à maneira sergipana!
+            </b></p>
+
+    </section>
+
+    <footer class="d-flex justify-content-center" style="padding-top: 400px; font-family: TT Norms; font-weight: bold;">Todos os direitos reservados</footer>
 
     <script>
         function toggleMenu() {
@@ -44,7 +191,18 @@
                 navbarItems.classList.add('active');
             }
         }
+
+        function toggleMenuOffOnScroll() {
+            const navbarItems = document.querySelector('.navbar-items');
+            navbarItems.classList.remove('active');
+        }
+
+        window.addEventListener('scroll', function () {
+            toggleMenuOffOnScroll();
+        });
+
+
     </script>
 </body>
-</html>
 
+</html>
