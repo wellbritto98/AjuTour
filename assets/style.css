@@ -5,6 +5,9 @@
     src: url('./fonts/TTNorms-Thin.otf') format('opentype');
 }
 
+html {
+    scroll-behavior: smooth;
+  }  
 
 body {
     background: linear-gradient(45deg, #6CEAE6, #B0DAE8, #A2CEEB, #DFE2E9, #FFEFE5);
@@ -16,7 +19,7 @@ body {
     white-space: pre;
 }
 
-.container {
+main.container {
     display: flex;
     align-items: center;
 }
@@ -54,6 +57,10 @@ header {
     max-width: 0;
     transition: max-width 1s linear;
     font-size: 20px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .navbar-items.active {

@@ -1,0 +1,58 @@
+body {
+    font-family: 'TT Norms';
+}
+
+header h1 {
+    width: 100%;
+    text-align: center;
+}
+
+div.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.map, .info, .social {
+    margin: 40px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.info {
+    font-size: 20px;
+    align-self: flex-start;
+    letter-spacing: 3px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 40px;
+  font-size: 20px;
+}
+  
+h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.redes {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.redes a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.redes a i {
+  margin-right: 10px;
+}
+  

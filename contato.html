@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aju Tour</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/contato.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <script src="https://kit.fontawesome.com/4188f6cdfe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="logo" width="150" height="150">
+        </div>
+        <nav class="navbar">
+            <span class="menu-icon" onclick="toggleMenu()">☰</span>
+            <ul class="navbar-items">
+                <li class="nav-item" style="transition-delay: 0.2s;">Inicio</li>
+                <li class="nav-item" style="transition-delay: 0.4s;">Atrações</li>
+                <li class="nav-item" style="transition-delay: 0.6s;">Sobre nós</li>
+                <li class="nav-item" style="transition-delay: 0.8s;"><a class="contato" href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <header>
+            <h1 class="principal">Contato</h1>
+        </header>
+
+        <div class="container">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.2766914259546!2d-37.06653822402882!3d-10.94245938921656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3c232417e93%3A0x33d3b66d382365ff!2sAv.%20Marieta%20Leite%20-%20Grageru%2C%20Aracaju%20-%20SE%2C%2049027-190!5e0!3m2!1spt-BR!2sbr!4v1696593448719!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="info">
+                <h2><strong>Escritório</strong></h2>
+                <p class="endereco">
+                    Rua Qualquer, 123 <br>
+                    Qualquer Cidade,<br>
+                    Estado, País<br>
+                    (12) 34567-7890<br>
+                </p>
+            </div>
+            <div class="social">
+                <h2><strong>Mídias sociais</strong></h2>
+                <p class="redes">
+                    <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i>Nosso Facebook</a><br>
+                    <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i>Nosso Instagram</a><br>
+                    <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i>Nosso X/Twitter</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const navbarItems = document.querySelector('.navbar-items');
+            if (navbarItems.classList.contains('active')) {
+                navbarItems.classList.remove('active');
+            } else {
+                navbarItems.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
+
