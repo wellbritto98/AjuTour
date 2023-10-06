@@ -16,7 +16,11 @@ body {
 
 .principal {
     font-size: 90px;
-    white-space: pre;
+    margin-top: 30%;
+    
+}
+.foto{
+    margin-top: 30%;
 }
 
 main.container {
