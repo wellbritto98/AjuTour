@@ -255,6 +255,68 @@ html {
 }
 
 
+a {
+    color: black;
+}
+
+
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 17px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+
+}
+
+.galeria img {
+    
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+.imagem_animacao {
+    position: relative;
+}
+
+.imagem_animacao img {
+   
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.imagem_animacao:hover img {
+    transform: scale(1.1);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+.imagem_texto {
+    
+    padding: 9px;
+    font-family: 'TT Norms', sans-serif;
+}
+
+.imagem_texto p {
+    margin: 0; 
+    font-size: 18px; 
+    font-family: 'TT Norms', sans-serif;
+}
+
+.texto_fonte{
+    font-family: 'TT Norms', sans-serif;
+    margin-top: 200px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 /* Estilos padrão para telas grandes */
 
 /* Estilos para telas de tamanho médio (ex.: laptops) */
