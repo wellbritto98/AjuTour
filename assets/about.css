@@ -1,0 +1,15 @@
+.about {
+    font-size: 36px;
+    font-family: 'TT Norms', sans-serif;
+    padding-left: 270px;
+    padding-top: 300px;
+}
+
+.paragrafo {
+    
+    font-family: 'TT Norms', sans-serif;
+    font-size: 24px;
+    padding-left: 270px;
+    padding-right: 270px;
+    text-align: justify;
+}
