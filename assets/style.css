@@ -229,6 +229,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+#carouselExampleCaptions{
+    max-width: 740px;
+    max-height: 415px;
+}
 
 
 /* Estilos padrão para telas grandes */
