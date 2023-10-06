@@ -125,3 +125,7 @@ img {
 .principal, .navbar-items {
     font-family: 'TT Norms', sans-serif;
 }
+
+a {
+    color: black;
+}
