@@ -191,7 +191,7 @@
         </div>
     </section>
 
-    
+
     <section class="section-contato">
         <h1 class="principal d-flex justify-content-center mb-5" id="sobrenos">Contato</h1>
 
@@ -226,9 +226,100 @@
                 </p>
             </div>
 
+            <div class="circulo">
+                <img src="assets/images/croa.jpeg" width="100px" style="border-radius: 50%;" alt="">
+            </div>
+
         </div>
+        <style>
+            .form-reserva {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .div-form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 35%;
+                height: 100%;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+                padding: 20px;
+            }
+        </style>
+        <form class="form-reserva">
+            <div class="div-form">
+                <h1>Formulario de reserva</h1>
+                <label for="nome-cliente">Nome</label>
+                <input type="text" name="" id="nome-cliente">
+                <label for="email-cliente">Email</label>
+                <input type="email" name="" id="email-cliente">
+                <label for="telefone-cliente">Telefone</label>
+                <input type="tel" name="" id="telefone-cliente">
+                <label for="data-cliente">Data</label>
+                <input type="date" name="" id="data-cliente">
+                <label for="pessoas-cliente">Quantidade de pessoas</label>
+                <input type="number" name="" id="pessoas-cliente">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
     </section>
 
+    <script>
+        reservas = [];
+
+        const form = document.querySelector('.form-reserva');
+
+        form.addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+            const nome = document.querySelector('#nome-cliente').value;
+            const email = document.querySelector('#email-cliente').value;
+            const telefone = document.querySelector('#telefone-cliente').value;
+            const data = document.querySelector('#data-cliente').value;
+            const pessoas = document.querySelector('#pessoas-cliente').value;
+
+
+            if (!nome || !email || !telefone || !data || !pessoas) {
+                alert('Por favor, preencha todos os campos');
+                return;
+            }
+            if (pessoas < 1) {
+                alert('Quantidade de pessoas inválida');
+                return;
+            }
+            if (data < new Date().toISOString().split('T')[0]) {
+                alert('Data inválida');
+                return;
+            }
+
+            for (let i = 0; i < reservas.length; i++) {
+                if (reservas[i].data === data) {
+                    alert('Já existe uma reserva para esta data');
+                    return;
+                }
+            }
+
+            const dados = {
+                nome,
+                email,
+                telefone,
+                data,
+                pessoas
+            };
+
+
+            reservas.push(dados);
+            console.log(dados);
+            console.log(reservas);
+        });
+
+
+    </script>
     <section style="padding-top: 400px;">
         <h1 class="principal d-flex justify-content-center mb-5" id="sobrenos">Sobre nós</h1>
         <p class="paragrafo"><b>Fundada no coração do vibrante estado de Sergipe, a Aju Tour se orgulha de ser uma das
